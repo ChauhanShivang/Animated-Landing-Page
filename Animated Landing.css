@@ -8,5 +8,119 @@
     height: 100vh;
     width: 100%;
     /* background-color: rgb(112, 150, 231); */
-    background: linear-gradient(rgb(113, 122, 247), rgb(64, 71, 100));
+    background: linear-gradient(#f9a423, #fff);
+}
+
+.banner{
+    /* width: 100%; */
+    position: absolute;
+    top: 30%;
+    left: 32%;
+    height: auto;
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner h1{
+    font-size: 4rem;
+    font-family: sans-serif;
+    animation: moveToUp 1s;
+    color: #000;
+}
+
+.banner span{
+    color: #f9a423;
+    text-shadow: 
+                2px 2px 0 #000,  
+               -2px 2px 0 #000,  
+                2px -2px 0 #000,  
+               -2px -2px 0 #000,  
+                2px 0 0 #000,     
+               -2px 0 0 #000,     
+                0 2px 0 #000,     
+                0 -2px 0 #000;
+}
+
+.banner p{
+    font-size: 1.3rem;
+    font-weight: 500;
+    animation: moveToDown 1s;
+    text-transform: lowercase;
+    text-align: center;
+}
+
+.banner button{
+    font-size: 1.3rem;
+}
+
+.btn{
+    border-radius: 1rem;
+    padding: .5rem .5rem;
+    cursor: pointer;
+    animation: moveToRight 1s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;    /* This animation will work after other completes */
+}
+
+/* Animation */
+@keyframes moveToUp{
+    0%{
+        transform: translateY(10rem);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moveToDown{
+    0%{
+        transform: translateY(-10rem);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* @keyframes moveToDown{
+    0%{
+        transform: translateY(-10rem);
+        opacity: 0;
+    }
+    20%{
+        transform: translateX(-10rem);
+        opacity: 1;
+    }
+    40%{
+        transform: translateY(10rem);
+        opacity: 1;
+    }
+    60%{
+        transform: translateX(10rem);
+        opacity: 1;
+    }
+    80%{
+        transform: translateY(-10rem);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+} */
+
+@keyframes moveToRight{
+    0%{
+        transform: translateX(-10rem);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
